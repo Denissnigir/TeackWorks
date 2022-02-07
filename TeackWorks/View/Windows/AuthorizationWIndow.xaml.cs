@@ -52,5 +52,12 @@ namespace TeackWorks.View.Windows
                 this.Close();
             }
         }
+
+        private void Register(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close();
+        }
     }
 }

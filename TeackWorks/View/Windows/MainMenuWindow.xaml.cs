@@ -23,12 +23,14 @@ namespace TeackWorks.View.Windows
     public partial class MainMenuWindow : Window
     {
         List<TypeService> typeServices = new List<TypeService>();
+        public static MainMenuWindow menuWindow { get; set; }
         public MainMenuWindow()
         {
             InitializeComponent();
             typeServices = Context._con.TypeService.ToList();
             DropDownMenuLB.ItemsSource = typeServices;
             MainFrame.Navigate(new MainPage());
+            menuWindow = this;
         }
 
 
@@ -39,13 +41,7 @@ namespace TeackWorks.View.Windows
 
         private void Exit(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Вы действительно хотите выйти?", "Подтверждение", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                AuthorizationWIndow authorizationWIndow = new AuthorizationWIndow();
-                authorizationWIndow.Show();
-                AuthorizationWIndow.client = null;
-                this.Close();
-            }
+            MainFrame.Navigate(new ProfilePage());
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -130,6 +130,9 @@
     <Compile Include="View\Pages\OrderPage.xaml.cs">
       <DependentUpon>OrderPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\Services\DesignPage.xaml.cs">
       <DependentUpon>DesignPage.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,9 @@
     </Compile>
     <Compile Include="View\Windows\OrderConstructorWindow.xaml.cs">
       <DependentUpon>OrderConstructorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Pages\ContatcPage.xaml">
       <SubType>Designer</SubType>
@@ -180,6 +186,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\Services\DesignPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\OrderConstructorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\RegisterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -254,6 +268,7 @@
       <DependentUpon>TeackWorksModel.edmx</DependentUpon>
       <LastGenOutput>TeackWorksModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\msn_user_avatar_person_people_icon_124220.png" />
     <Resource Include="Resources\1456266303_contact-09_1.png" />
     <Resource Include="Resources\flag_1.png" />
     <Resource Include="Resources\message_1.png" />

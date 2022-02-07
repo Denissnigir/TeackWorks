@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,11 +37,21 @@ namespace TeackWorks.View.Pages.OrderConstructor
         {
             if (!string.IsNullOrWhiteSpace(PhoneTB.Text))
             {
-                Context._con.NewOrder.Add(FirstPage.newOrder);
-                Context._con.SaveChanges();
-                MessageBox.Show("Заявка успешно оформлена, с вями свяжутся в ближайшее время!");
-                FirstPage.newOrder = null;
-                OrderConstructorWindow.window.Close();
+                Regex regexPhone = new Regex(@"^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$");
+                Regex regexEmail = new Regex(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z");
+                if (regexPhone.IsMatch(PhoneTB.Text) || regexEmail.IsMatch(PhoneTB.Text))
+                {
+                    Context._con.NewOrder.Add(FirstPage.newOrder);
+                    Context._con.SaveChanges();
+                    MessageBox.Show("Заявка успешно оформлена, с вями свяжутся в ближайшее время!");
+                    FirstPage.newOrder = null;
+                    OrderConstructorWindow.window.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный формат ввода номера телефона или Email!");
+                }
+                
             }
             else
             {

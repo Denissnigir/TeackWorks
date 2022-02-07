@@ -22,18 +22,18 @@
                 <RowDefinition Height="0.3*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Профессиональная разработка продающих сайтов"  VerticalAlignment="Bottom" FontSize="32" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White"/>
-            <TextBlock Text="Тщательно продумаем дизайн и структуру вашего сайта. Заставим ваш сайт продавать и работать на вас."  VerticalAlignment="Top" FontSize="18" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White" Grid.Row="1"/>
+            <TextBlock Text="Профессиональная разработка продающих сайтов"  VerticalAlignment="Bottom" FontSize="64" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White"/>
+            <TextBlock Text="Тщательно продумаем дизайн и структуру вашего сайта. Заставим ваш сайт продавать и работать на вас."  VerticalAlignment="Top" FontSize="36" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White" Grid.Row="1"/>
             <Grid Grid.Row="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0">
-                    <Button Background="White" Click="Button_Click" BorderBrush="White" Content="Выбрать тип сайта" FontSize="12" Width="180"/>
-                    <Button Background="White" Click="OpenConstructor" BorderBrush="White" Content="Рассчитать стоимость" FontSize="12" Width="180" Margin="10, 0, 0, 0"/>
+                    <Button Background="White" Click="Button_Click" BorderBrush="White" Content="Выбрать тип сайта" FontSize="24" Width="360" Height="50"/>
+                    <Button Background="White" Click="OpenConstructor" BorderBrush="White" Content="Рассчитать стоимость" FontSize="24" Width="360" Height="50" Margin="10, 0, 0, 0"/>
                 </StackPanel>
             </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
-            <Image Source="/TeackWorks;component/Resources/slider5.png"/>
+            <Image Source="/TeackWorks;component/Resources/slider5.png" Margin="40"/>
         </Grid>
     </Grid>
 </Page>
