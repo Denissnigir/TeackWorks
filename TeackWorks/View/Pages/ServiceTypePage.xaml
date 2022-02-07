@@ -21,11 +21,11 @@
             </Grid.Background>
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Услуги" FontSize="64" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Text="Услуги" FontSize="32" Foreground="White" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="Главная" FontSize="40" Foreground="White"/>
-                    <TextBlock Text="->" FontSize="40" Foreground="White" Margin="10, 0, 10, 0"/>
-                    <TextBlock Text="Услуги" FontSize="40" Foreground="White"/>
+                    <TextBlock Text="Главная" FontSize="20" Foreground="White"/>
+                    <TextBlock Text="->" FontSize="20" Foreground="White" Margin="10, 0, 10, 0"/>
+                    <TextBlock Text="Услуги" FontSize="20" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
@@ -47,14 +47,14 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="0.6*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Рассчитать стоимость" FontWeight="Black" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40, 0, 0, 0" TextWrapping="Wrap" TextAlignment="Left"/>
+                    <TextBlock Text="Рассчитать стоимость" FontWeight="Black" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40, 0, 0, 0" TextWrapping="Wrap" TextAlignment="Left"/>
 
-                    <TextBlock Text="Рассчитайте стоимость разработки сайта онлайн" FontSize="36" HorizontalAlignment="Left" Margin="40, 0, 0, 0" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
+                    <TextBlock Text="Рассчитайте стоимость разработки сайта онлайн" FontSize="14" HorizontalAlignment="Left" Margin="40, 0, 0, 0" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
 
-                    <Button Grid.Row="2" Click="OpenConstructor" Width="380" Content="Рассчитать стоимость" Foreground="White" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 10, 0, 0"/>
+                    <Button Grid.Row="2" Click="OpenConstructor" Width="190" Content="Рассчитать стоимость" Foreground="White" FontSize="12" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 5, 0, 0"/>
                 </Grid>
             </Grid>
 
@@ -67,8 +67,8 @@
 
                 <Image Source="/TeackWorks;component/Resources/services1.png"/>
 
-                <TextBlock Text="Разработка" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
-                <TextBlock Text="Разработаем сайт, Интернет-магазин или сервис. Индивидуальный дизайн и адаптивная верстка." FontSize="24" Width="360" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2"/>
+                <TextBlock Text="Разработка" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
+                <TextBlock Text="Разработаем сайт, Интернет-магазин или сервис. Индивидуальный дизайн и адаптивная верстка." FontSize="12" Width="180" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2"/>
 
             </Grid>
 
@@ -81,8 +81,8 @@
 
                 <Image Source="/TeackWorks;component/Resources/services4.png"/>
 
-                <TextBlock Text="Дизайн" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
-                <TextBlock Text="Уникальный дизайн для сайтов, баннеров, логотипов, презентаций и буклетов. Разработка фирменного стиля." FontSize="24" Width="360" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2"/>
+                <TextBlock Text="Дизайн" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black" TextWrapping="Wrap" TextAlignment="Left" Grid.Row="1"/>
+                <TextBlock Text="Уникальный дизайн для сайтов, баннеров, логотипов, презентаций и буклетов. Разработка фирменного стиля." FontSize="12" Width="180" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2"/>
 
             </Grid>
         </Grid>
