@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TeackWorks.Model;
+using TeackWorks.View.Windows;
 
 namespace TeackWorks.View.Pages
 {
@@ -25,26 +26,70 @@ namespace TeackWorks.View.Pages
         public OrderPage()
         {
             InitializeComponent();
-            orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
+            if(AuthorizationWIndow.client.IdRole == 3)
+            {
+                orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
+            }
+            else
+            {
+                orders = Context._con.Order.ToList();
+            }
             OrdersLB.ItemsSource = orders;
         }
 
         private void AllProjects(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
+            if (AuthorizationWIndow.client.IdRole == 3)
+            {
+                orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
+            }
+            else
+            {
+                orders = Context._con.Order.ToList();
+            }
             OrdersLB.ItemsSource = orders;
         }
 
         private void Development(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList().Where(p => p.IdService == 1 && p.Status == true).ToList();
+            if(AuthorizationWIndow.client.IdRole == 3)
+            {
+                orders = Context._con.Order.ToList().Where(p => p.IdService == 1 && p.Status == true).ToList();
+            }
+            else
+            {
+                orders = Context._con.Order.ToList().Where(p => p.IdService == 1).ToList();
+            }
             OrdersLB.ItemsSource = orders;
         }
 
         private void Design(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList().Where(p => p.IdService == 2 && p.Status == true).ToList();
+            if (AuthorizationWIndow.client.IdRole == 3)
+            {
+                orders = Context._con.Order.ToList().Where(p => p.IdService == 2 && p.Status == true).ToList();
+            }
+            else
+            {
+                orders = Context._con.Order.ToList().Where(p => p.IdService == 2).ToList();
+            }
             OrdersLB.ItemsSource = orders;
+        }
+
+        private void OrdersLB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Order curOrder = OrdersLB.SelectedItem as Order;
+            if(curOrder != null)
+            {
+                if (curOrder.Status == false)
+                {
+                    NavigationService.Navigate(new OrderEditDetails(curOrder));
+                }
+                else
+                {
+                    NavigationService.Navigate(new OrderDetails(curOrder));
+                }
+            }
         }
     }
 }

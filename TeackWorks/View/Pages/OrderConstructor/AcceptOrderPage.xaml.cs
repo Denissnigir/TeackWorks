@@ -29,8 +29,8 @@ namespace TeackWorks.View.Pages.OrderConstructor
             PriceTB.Text = price;
             DiscountTB.Text = discount;
             MainGrid.DataContext = FirstPage.newOrder;
-            //var client = Context._con.User.FirstOrDefault(p => p.Id == FirstPage.newOrder.User);
-            //NameTB.Text = client.FirstName;
+            var client = AuthorizationWIndow.client;
+            NameTB.Text = client.FIO;
         }
 
         private void AcceptOrder(object sender, RoutedEventArgs e)
@@ -41,7 +41,19 @@ namespace TeackWorks.View.Pages.OrderConstructor
                 Regex regexEmail = new Regex(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z");
                 if (regexPhone.IsMatch(PhoneTB.Text) || regexEmail.IsMatch(PhoneTB.Text))
                 {
-                    //Context._con.NewOrder.Add(FirstPage.newOrder);
+                    switch (FirstPage.newOrder.IdService)
+                    {
+                        case 1:
+                            FirstPage.newOrder.Price = 1000;
+                            break;
+                        case 2:
+                            FirstPage.newOrder.Price = 1500;
+                            break;
+                        case 3:
+                            FirstPage.newOrder.Price = 2500;
+                            break;
+                    }
+                    Context._con.Order.Add(FirstPage.newOrder);
                     Context._con.SaveChanges();
                     MessageBox.Show("Заявка успешно оформлена, с вями свяжутся в ближайшее время!");
                     FirstPage.newOrder = null;

@@ -28,6 +28,8 @@ namespace TeackWorks.View.Pages.OrderConstructor
             InitializeComponent();
             newOrder = new Order();
             newOrder.IdClient = AuthorizationWIndow.client.Id;
+            newOrder.DateClose = DateTime.Now;
+            newOrder.Status = false;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -46,18 +48,19 @@ namespace TeackWorks.View.Pages.OrderConstructor
             PriceTB.Text = "Цена: 1000 руб.";
         }
 
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            var service = Context._con.Service.FirstOrDefault(p => p.Id == 3);
+            newOrder.IdService = service.Id;
+            DiscountTB.Text = "Скидка: 2000 руб.";
+            PriceTB.Text = "Цена: 2500 руб.";
+        }
+
         private void GoForward(object sender, RoutedEventArgs e)
         {
             if(DiscountTB.Text == "Скидка: 2000 руб.")
             {
-                if(PriceTB.Text == "Цена: 1500 руб.")
-                {
-                    NavigationService.Navigate(new SecondPage());
-                }
-                else
-                {
-                    NavigationService.Navigate(new SecondPageDesign());
-                }
+                NavigationService.Navigate(new AcceptOrderPage(PriceTB.Text, DiscountTB.Text));
             }
             else
             {

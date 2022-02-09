@@ -119,11 +119,11 @@
     <Compile Include="View\Pages\OrderConstructor\FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\OrderConstructor\SecondPage.xaml.cs">
-      <DependentUpon>SecondPage.xaml</DependentUpon>
+    <Compile Include="View\Pages\OrderDetails.xaml.cs">
+      <DependentUpon>OrderDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\OrderConstructor\SecondPageDesign.xaml.cs">
-      <DependentUpon>SecondPageDesign.xaml</DependentUpon>
+    <Compile Include="View\Pages\OrderEditDetails.xaml.cs">
+      <DependentUpon>OrderEditDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\OrderPage.xaml.cs">
       <DependentUpon>OrderPage.xaml</DependentUpon>
@@ -172,11 +172,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\OrderConstructor\SecondPage.xaml">
+    <Page Include="View\Pages\OrderDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\OrderConstructor\SecondPageDesign.xaml">
+    <Page Include="View\Pages\OrderEditDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

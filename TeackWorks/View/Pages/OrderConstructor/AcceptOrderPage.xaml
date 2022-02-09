@@ -24,14 +24,11 @@
             </Grid.RowDefinitions>
 
             <Grid>
-                <Grid.Background>
-                    <ImageBrush ImageSource="/TeackWorks;component/Resources/bg-7.png" Stretch="UniformToFill"/>
-                </Grid.Background>
-                <TextBlock Text="TeackWorks" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32"/>
+                <TextBlock Text="Aqua"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32"/>
             </Grid>
 
             <Grid Grid.Row="1">
-                <TextBlock Text="Оставьте, пожалуйста, Вашу контактную информацию для отправки персонального предложения > В качестве подарка Вы получите: 1) Бесплатный анализ ниши и разработку рекламной стратегии 2) Бесплатный концепт-макет Вашего будущего сайта 3) Консультацию профессионалов Теперь мы понимаем Вашу задачу и можем предложить Вам самое выгодное и эффективное решение для бизнеса. Мы работаем на результат! Мы позвоним Вам и расскажем как сделать эффективный сайт для Вашего бизнеса." TextWrapping="Wrap" FontSize="14" Margin="10, 0, 0, 0"/>
+                <TextBlock Text="Оставьте, пожалуйста, Вашу контактную информацию для отправки персонального предложения и подтверждения заказа. В скоро времени с Вами созвонятся для обусждения время съёмки." TextWrapping="Wrap" FontSize="14" Margin="10, 0, 0, 0"/>
             </Grid>
 
             <Grid Grid.Row="2">
