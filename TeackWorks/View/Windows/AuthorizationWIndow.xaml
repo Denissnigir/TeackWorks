@@ -18,9 +18,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Background="#63a0d8">
-            <TextBlock Text="Студия веб-дизайна TeackWorks" Foreground="White" Style="{StaticResource MaterialDesignHeadline1TextBlock}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Click="Exit" Background="#63a0d8"  Style="{StaticResource MaterialDesignFloatingActionMiniButton}" HorizontalContentAlignment="Center" BorderBrush="#63a0d8" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0" Foreground="White">
+        <Grid Background="Black">
+            <TextBlock Text="Студия подводной фотосъёмки Aqua" TextWrapping="Wrap" TextAlignment="Center" Width="350" Foreground="White" Style="{StaticResource MaterialDesignHeadline1TextBlock}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Click="Exit" Background="Transparent"  Style="{StaticResource MaterialDesignFloatingActionMiniButton}" HorizontalContentAlignment="Center" BorderBrush="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0" Foreground="White">
                 <Button.Content>
                     <materialDesign:PackIcon Kind="ExitToApp" Foreground="White"/>
                 </Button.Content>
@@ -28,7 +28,7 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Rectangle Fill="#63a0d8" Height="150" VerticalAlignment="Top">
+            <Rectangle Fill="Black" Height="150" VerticalAlignment="Top">
 
             </Rectangle>
             <Rectangle Width="280" Height="240" VerticalAlignment="Center" RadiusY="10" RadiusX="10" Fill="White" HorizontalAlignment="Center">

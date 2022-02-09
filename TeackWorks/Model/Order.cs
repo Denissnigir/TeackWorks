@@ -14,14 +14,26 @@ namespace TeackWorks.Model
     
     public partial class Order
     {
-        public int Id { get; set; }
-        public Nullable<int> IdService { get; set; }
-        public Nullable<int> IdClient { get; set; }
-        public string NameOrder { get; set; }
-        public Nullable<System.DateTime> DateCreation { get; set; }
-        public byte[] Image { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Order()
+        {
+            this.OrderPicture = new HashSet<OrderPicture>();
+        }
     
-        public virtual Client Client { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> IdPersonal { get; set; }
+        public Nullable<int> IdClient { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public string Comment { get; set; }
+        public Nullable<System.DateTime> DateOpen { get; set; }
+        public Nullable<System.DateTime> DateClose { get; set; }
+        public Nullable<bool> Status { get; set; }
+        public Nullable<int> IdService { get; set; }
+    
         public virtual Service Service { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderPicture> OrderPicture { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace TeackWorks.View.Windows
     /// </summary>
     public partial class AuthorizationWIndow : Window
     {
-        public static Client client { get; set; }
+        public static User client { get; set; }
         public AuthorizationWIndow()
         {
             InitializeComponent();
@@ -28,8 +28,8 @@ namespace TeackWorks.View.Windows
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            var user = Context._con.Client.ToList()
-                                          .Where(p => p.Login == LoginTB.Text && p.Password == PasswordTB.Password)
+            var user = Context._con.User.ToList()
+                                          .Where(p => p.UserName == LoginTB.Text && p.Password == PasswordTB.Password)
                                           .FirstOrDefault();
             if(user != null)
             {

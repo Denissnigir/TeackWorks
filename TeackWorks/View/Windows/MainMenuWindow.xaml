@@ -8,23 +8,34 @@
         ResizeMode="CanMinimize" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="ThreeDBorderWindow" 
+        WindowStyle="None" 
         FontFamily="Century Gothic" Height="450" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Grid>
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <MediaElement Stretch="Fill" x:Name="MP4" LoadedBehavior="Manual" MediaEnded="MP4_MediaEnded" UnloadedBehavior="Manual"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid>
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.4*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="TEACKWORKS" Foreground="#63a0d8" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"/>
-                <TextBlock Text="Студия веб-дизайна" HorizontalAlignment="Center" FontSize="18"/>
+                <TextBlock Text="Aqua" Foreground="#63a0d8" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                <TextBlock Text="Студия подводной фотосъёмки" Foreground="White" HorizontalAlignment="Center" FontSize="12"/>
             </StackPanel>
 
 
@@ -34,57 +45,27 @@
                     <ColumnDefinition Width="0.2*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Главная"  FontSize="24" Style="{StaticResource HeaderTB}" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_1" Text="Услуги" Style="{StaticResource HeaderTB}" Margin="10, 0, 0, 0" FontSize="24"/>
-                        <materialDesign:PackIcon Kind="Menu" Background="White" MouseLeftButtonDown="PackIcon_MouseLeftButtonDown" VerticalAlignment="Bottom" Margin="2, 0, 0, 0" Height="25" Width="25"/>
-                    </StackPanel>
-                    <TextBlock Text="Кейсы" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_2" Style="{StaticResource HeaderTB}" Margin="10, 0, 0, 0" FontSize="24"/>
-                    <TextBlock Text="Контакты" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_3" Style="{StaticResource HeaderTB}" Margin="10, 0, 0, 0" FontSize="24"/>
+                    <TextBlock Text="Главная"  FontSize="24" Style="{StaticResource HeaderTB}" Foreground="White"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                    <TextBlock MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_1" Text="Услуги" Style="{StaticResource HeaderTB}" Foreground="White"  Margin="10, 0, 0, 0" FontSize="24"/>
+                    <TextBlock Text="Работы" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_2" Style="{StaticResource HeaderTB}" Foreground="White"  Margin="10, 0, 0, 0" FontSize="24"/>
+                    <TextBlock Text="Контакты" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_3" Style="{StaticResource HeaderTB}" Foreground="White"  Margin="10, 0, 0, 0" FontSize="24"/>
                 </StackPanel>
 
-                <Button Grid.Column="1" Click="Exit" Background="#63a0d8" Height="40" Width="40" BorderBrush="#63a0d8" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                <Button Grid.Column="1" Click="Exit" Background="White" Height="40" Width="40" BorderBrush="White" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
                     <Button.Content>
-                        <materialDesign:PackIcon Kind="EmojiManProfile" Height="16" Width="16" Foreground="White"/>
+                        <materialDesign:PackIcon Kind="EmojiManProfile" Height="16" Width="16" Foreground="#63a0d8"/>
                     </Button.Content>
                 </Button>
-
 
             </Grid>
 
         </Grid>
 
         <Grid Grid.Row="1">
+            
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden">
 
             </Frame>
-        </Grid>
-
-        <Grid Grid.RowSpan="2" Width="410" Height="120" Visibility="Collapsed" x:Name="DropDown" Background="Transparent" Margin="30, 0, 0, 530">
-            <Rectangle Width="410" Height="120" VerticalAlignment="Center" RadiusY="20" RadiusX="20" Fill="White" HorizontalAlignment="Center">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="30" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
-                </Rectangle.Effect>
-            </Rectangle>
-            <ListBox x:Name="DropDownMenuLB" SelectionChanged="DropDownMenuLB_SelectionChanged" ScrollViewer.CanContentScroll="False">
-                <ListBox.Resources>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                    </Style>
-                </ListBox.Resources>
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 0"/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding NameType}" FontSize="36"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
         </Grid>
     </Grid>
 </Window>

@@ -17,21 +17,15 @@ namespace TeackWorks.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Service()
         {
-            this.NewOrder = new HashSet<NewOrder>();
             this.Order = new HashSet<Order>();
         }
     
         public int Id { get; set; }
         public string NameService { get; set; }
-        public Nullable<decimal> Price { get; set; }
+        public Nullable<decimal> Cost { get; set; }
         public string Description { get; set; }
-        public Nullable<int> HowManyDay { get; set; }
-        public Nullable<int> IdTypeService { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NewOrder> NewOrder { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
-        public virtual TypeService TypeService { get; set; }
     }
 }

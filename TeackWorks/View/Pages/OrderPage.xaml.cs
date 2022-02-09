@@ -25,25 +25,25 @@ namespace TeackWorks.View.Pages
         public OrderPage()
         {
             InitializeComponent();
-            orders = Context._con.Order.ToList();
+            orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
             OrdersLB.ItemsSource = orders;
         }
 
         private void AllProjects(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList();
+            orders = Context._con.Order.ToList().Where(p => p.Status == true).ToList();
             OrdersLB.ItemsSource = orders;
         }
 
         private void Development(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList().Where(p => p.Service.IdTypeService == 1).ToList();
+            orders = Context._con.Order.ToList().Where(p => p.IdService == 1 && p.Status == true).ToList();
             OrdersLB.ItemsSource = orders;
         }
 
         private void Design(object sender, RoutedEventArgs e)
         {
-            orders = Context._con.Order.ToList().Where(p => p.Service.IdTypeService == 2).ToList();
+            orders = Context._con.Order.ToList().Where(p => p.IdService == 2 && p.Status == true).ToList();
             OrdersLB.ItemsSource = orders;
         }
     }

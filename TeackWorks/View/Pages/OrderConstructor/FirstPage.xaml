@@ -22,12 +22,9 @@
             </Grid.RowDefinitions>
 
             <Grid>
-                <Grid.Background>
-                    <ImageBrush ImageSource="/TeackWorks;component/Resources/bg-7.png" Stretch="UniformToFill"/>
-                </Grid.Background>
                 <StackPanel VerticalAlignment="Center" Margin="10, 0, 0, 0">
-                    <TextBlock Text="Какие услуги вас интересуют?" Foreground="White" FontSize="22"/>
-                    <TextBlock Text="Вам нужна разработка сайта или его дизайн?" FontSize="18" Foreground="White" Margin="0, 10, 0, 0"/>
+                    <TextBlock  Text="Какие услуги вас интересуют?" FontSize="22"/>
+                    <TextBlock Text="Вам нужна разработка сайта или его дизайн?" FontSize="18" Margin="0, 10, 0, 0"/>
                 </StackPanel>
             </Grid>
             
@@ -35,7 +32,7 @@
             <Grid Grid.Row="1">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0, 50, 0, 0">
                     <RadioButton Content="Разработка" FontSize="24" GroupName="RB" Checked="RadioButton_Checked"/>
-                    <RadioButton Checked="RadioButton_Checked_1" Content="Дизайн" FontSize="24" Margin="30, 0, 0, 0" GroupName="RB"/>
+                    <RadioButton Checked="RadioButton_Checked_1"  Content="Дизайн" FontSize="24" Margin="30, 0, 0, 0" GroupName="RB"/>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -49,16 +46,16 @@
             <StackPanel>
                 <Border BorderBrush="Black" VerticalAlignment="Top" BorderThickness="1" Height="35" Margin="10, 10, 10, 0">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5, 0, 0, 0">
-                        <TextBlock Text="Ваша скидка: " FontSize="10" x:Name="DiscountTB"/>
+                        <TextBlock Text="Ваша скидка: " Foreground="Black" FontSize="10" x:Name="DiscountTB"/>
                     </StackPanel>
                 </Border>
                 <Border BorderBrush="Black" VerticalAlignment="Top" BorderThickness="1" Height="35" Margin="10, 10, 10, 0">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5, 0, 0, 0">
-                        <TextBlock Text="Ваша цена: " FontSize="10" x:Name="PriceTB"/>
+                        <TextBlock Text="Ваша цена: " Foreground="Black" FontSize="10" x:Name="PriceTB"/>
                     </StackPanel>
                 </Border>
 
-                <Button Grid.Row="1" Click="GoForward" Margin="10, 10, 10, 0" Content="Далее"/>
+                <Button Grid.Row="1" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="GoForward" Margin="10, 10, 10, 0" Content="Далее"/>
 
             </StackPanel>
 

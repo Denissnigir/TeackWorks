@@ -20,20 +20,20 @@ namespace TeackWorks.View.Windows
     /// </summary>
     public partial class RegisterWindow : Window
     {
-        Client client { get; set; }
+        User client { get; set; }
         public RegisterWindow()
         {
             InitializeComponent();
-            client = new Client();
+            client = new User();
             MainGrid.DataContext = client;
         }
 
         private void Register(object sender, RoutedEventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(client.FirstName) && !string.IsNullOrWhiteSpace(client.LastName) && !string.IsNullOrWhiteSpace(client.Login) && !string.IsNullOrWhiteSpace(PasswordTB.Password))
+            if(!string.IsNullOrWhiteSpace(client.FIO) && !string.IsNullOrWhiteSpace(client.Email) && !string.IsNullOrWhiteSpace(client.UserName) && !string.IsNullOrWhiteSpace(PasswordTB.Password))
             {
                 client.Password = PasswordTB.Password;
-                Context._con.Client.Add(client);
+                Context._con.User.Add(client);
                 Context._con.SaveChanges();
                 MessageBox.Show("Вы успешно зарегестрировались!");
                 AuthorizationWIndow authorizationWIndow = new AuthorizationWIndow();

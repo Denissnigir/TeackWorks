@@ -22,26 +22,26 @@ namespace TeackWorks.View.Pages.OrderConstructor
     /// </summary>
     public partial class FirstPage : Page
     {
-        public static NewOrder newOrder { get; set; }
+        public static Order newOrder { get; set; }
         public FirstPage()
         {
             InitializeComponent();
-            newOrder = new NewOrder();
-            newOrder.ClientId = AuthorizationWIndow.client.Id;
+            newOrder = new Order();
+            newOrder.IdClient = AuthorizationWIndow.client.Id;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.TypeService.FirstOrDefault(p => p.Id == 1);
-            newOrder.ServiceTypeId = service.Id;
+            var service = Context._con.Service.FirstOrDefault(p => p.Id == 1);
+            newOrder.IdService = service.Id;
             DiscountTB.Text = "Скидка: 2000 руб.";
             PriceTB.Text = "Цена: 1500 руб.";
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.TypeService.FirstOrDefault(p => p.Id == 2);
-            newOrder.ServiceTypeId = service.Id;
+            var service = Context._con.Service.FirstOrDefault(p => p.Id == 2);
+            newOrder.IdService = service.Id;
             DiscountTB.Text = "Скидка: 2000 руб.";
             PriceTB.Text = "Цена: 1000 руб.";
         }

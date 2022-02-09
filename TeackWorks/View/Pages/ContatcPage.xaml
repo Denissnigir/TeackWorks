@@ -10,24 +10,27 @@
       FontFamily="Century Gothic">
 
     <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Black" Opacity="0.5"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid>
-            <Grid.Background>
-                <ImageBrush ImageSource="/TeackWorks;component/Resources/bg-7.png" TileMode="Tile" Stretch="UniformToFill"/>
-            </Grid.Background>
 
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Контакты" FontSize="32" Foreground="White" HorizontalAlignment="Center"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="Главная" FontSize="20" Foreground="White"/>
-                    <TextBlock Text="->" FontSize="20" Foreground="White" Margin="10, 0, 10, 0"/>
-                    <TextBlock Text="Контакты" FontSize="20" Foreground="White"/>
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Width="250">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Контакты" FontSize="32" Foreground="White" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="Главная" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="->" FontSize="20" Foreground="White" Margin="10, 0, 10, 0"/>
+                        <TextBlock Text="Контакты" FontSize="20" Foreground="White"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </Border>
+            
         </Grid>
 
         <Grid Grid.Row="1" >
@@ -53,9 +56,9 @@
 
                     <Image Source="/TeackWorks;component/Resources/flag_1.png" />
 
-                    <TextBlock Grid.Row="1" Text="Москва" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Black"/>
+                    <TextBlock Grid.Row="1" Foreground="White" Text="Москва" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Black"/>
 
-                    <TextBlock Grid.Row="2" Text="Ул. Уличная, д. ДОМ" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                    <TextBlock Grid.Row="2" Foreground="White" Text="Ул. Уличная, д. ДОМ" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                 </Grid>
 
                 <Grid Grid.Column="1">
@@ -67,9 +70,9 @@
 
                     <Image Source="/TeackWorks;component/Resources/message_1.png" />
 
-                    <TextBlock Grid.Row="1" Text="{Binding Email1}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Black"/>
+                    <TextBlock Grid.Row="1" Foreground="White" Text="aqua@mail.ru" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Black"/>
 
-                    <TextBlock Grid.Row="2" Text="Email" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28" />
+                    <TextBlock Grid.Row="2" Foreground="White" Text="Email" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
 
                 </Grid>
 
@@ -82,9 +85,9 @@
 
                     <Image Source="/TeackWorks;component/Resources/1456266303_contact-09_1.png" />
 
-                    <TextBlock Grid.Row="1" Text="{Binding PhoneNumber1}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Black"/>
+                    <TextBlock Grid.Row="1" Foreground="White" Text="+79999999999" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Black"/>
 
-                    <TextBlock Grid.Row="2" Text="Телефон" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28" />
+                    <TextBlock Grid.Row="2" Foreground="White" Text="Телефон" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
 
                 </Grid>
 
@@ -97,21 +100,20 @@
 
                     <Image Source="/TeackWorks;component/Resources/whatsapp-96x96.png" />
 
-                    <TextBlock Grid.Row="1" Text="{Binding WhatsAppNumber1}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Black"/>
+                    <TextBlock Grid.Row="1" Foreground="White" Text="+79999999999" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Black"/>
 
-                    <TextBlock Grid.Row="2" Text="WhatsApp" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28" />
+                    <TextBlock Grid.Row="2" Foreground="White" Text="WhatsApp" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
 
                 </Grid>
             </Grid>
 
             <Grid Grid.Row="1">
-                <Grid.Background>
-                    <ImageBrush ImageSource="/TeackWorks;component/Resources/bg-7.png" Stretch="UniformToFill"/>
-                </Grid.Background>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Рассчитайте стоимость разработки сайта" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
-                    <Button Content="Рассчитать" Click="OpenConstructor" FontSize="24" Height="40" Foreground="White" Margin="20, 0, 0, 0"/>
-                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="750" Height="70" CornerRadius="10">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Рассчитайте стоимость разработки сайта" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+                        <Button Content="Рассчитать" Click="OpenConstructor" FontSize="24" Height="40" Foreground="White" Background="Transparent" BorderBrush="Black" Margin="20, 0, 0, 0"/>
+                    </StackPanel>
+                </Border>
             </Grid>
         </Grid>
     </Grid>

@@ -25,8 +25,6 @@ namespace TeackWorks.View.Pages
         public ContatcPage()
         {
             InitializeComponent();
-            var data = Context._con.Contact.ToList().FirstOrDefault();
-            MainGrid.DataContext = data;
         }
 
         private void OpenConstructor(object sender, RoutedEventArgs e)

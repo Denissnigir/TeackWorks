@@ -27,7 +27,7 @@
                         <BeginStoryboard >
                             <Storyboard>
                                 <ColorAnimation Duration="0:0:.3" 
-                                                To="Black" 
+                                                To="White" 
                                                 Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
                             </Storyboard>
                         </BeginStoryboard>

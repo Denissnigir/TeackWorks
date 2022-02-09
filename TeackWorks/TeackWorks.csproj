@@ -73,41 +73,39 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Context.cs" />
-    <Compile Include="Model\Client.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+    <Compile Include="Classes\PartClasses\OrderPartClass.cs" />
+    <Compile Include="Model\AquaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Contact.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+    <Compile Include="Model\AquaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\NewOrder.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+    <Compile Include="Model\AquaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Order.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+      <DependentUpon>AquaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OrderPicture.cs">
+      <DependentUpon>AquaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs">
+      <DependentUpon>AquaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Service.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+      <DependentUpon>AquaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+      <DependentUpon>AquaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TeackWorksModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeackWorksModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TeackWorksModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TeackWorksModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeackWorksModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TypeService.cs">
-      <DependentUpon>TeackWorksModel.tt</DependentUpon>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>AquaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\ContatcPage.xaml.cs">
       <DependentUpon>ContatcPage.xaml</DependentUpon>
@@ -237,12 +235,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\TeackWorksModel.edmx">
+    <EntityDeploy Include="Model\AquaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TeackWorksModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>AquaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\TeackWorksModel.edmx.diagram">
-      <DependentUpon>TeackWorksModel.edmx</DependentUpon>
+    <None Include="Model\AquaModel.edmx.diagram">
+      <DependentUpon>AquaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -258,16 +256,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Model\TeackWorksModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TeackWorksModel.Context.cs</LastGenOutput>
-      <DependentUpon>TeackWorksModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\TeackWorksModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TeackWorksModel.edmx</DependentUpon>
-      <LastGenOutput>TeackWorksModel.cs</LastGenOutput>
-    </Content>
+    <Resource Include="Resources\world-special-4.png" />
+    <Resource Include="Resources\Concept.wmv" />
     <Resource Include="Resources\msn_user_avatar_person_people_icon_124220.png" />
     <Resource Include="Resources\1456266303_contact-09_1.png" />
     <Resource Include="Resources\flag_1.png" />
@@ -281,6 +271,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\AquaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AquaModel.edmx</DependentUpon>
+      <LastGenOutput>AquaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\AquaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AquaModel.edmx</DependentUpon>
+      <LastGenOutput>AquaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />

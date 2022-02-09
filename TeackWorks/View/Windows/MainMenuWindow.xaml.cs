@@ -22,15 +22,15 @@ namespace TeackWorks.View.Windows
     /// </summary>
     public partial class MainMenuWindow : Window
     {
-        List<TypeService> typeServices = new List<TypeService>();
         public static MainMenuWindow menuWindow { get; set; }
         public MainMenuWindow()
         {
             InitializeComponent();
-            typeServices = Context._con.TypeService.ToList();
-            DropDownMenuLB.ItemsSource = typeServices;
             MainFrame.Navigate(new MainPage());
             menuWindow = this;
+            MP4.Source = new Uri(Environment.CurrentDirectory + @"\Concept.wmv");
+            MP4.Position = TimeSpan.Zero;
+            MP4.Play();
         }
 
 
@@ -49,18 +49,6 @@ namespace TeackWorks.View.Windows
             this.DragMove();
         }
 
-        private void PackIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if(DropDown.Visibility == Visibility.Collapsed)
-            {
-                DropDown.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                DropDown.Visibility = Visibility.Collapsed;
-            }
-        }
-
         private void TextBlock_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new ServiceTypePage());
@@ -76,20 +64,10 @@ namespace TeackWorks.View.Windows
             MainFrame.Navigate(new ContatcPage());
         }
 
-        private void DropDownMenuLB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void MP4_MediaEnded(object sender, RoutedEventArgs e)
         {
-            if(DropDownMenuLB.SelectedItem is TypeService service)
-            {
-                switch (service.Id)
-                {
-                    case 1:
-                        MainFrame.Navigate(new DevelopmentPage());
-                        break;
-                    case 2:
-                        MainFrame.Navigate(new DesignPage());
-                        break;
-                }
-            }
+            MP4.Position = TimeSpan.Zero;
+            MP4.Play();
         }
     }
 }

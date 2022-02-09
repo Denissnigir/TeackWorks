@@ -30,38 +30,38 @@ namespace TeackWorks.View.Pages.OrderConstructor
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.Service.FirstOrDefault(p => p.Id == 5);
-            decimal? price = 2000 + service.Price;
-            DiscountTB.Text = "Скидка: 4000 руб.";
-            PriceTB.Text = $"Цена: {price} руб.";
-            FirstPage.newOrder.ServiceId = service.Id;
+            //var service = Context._con.Service.FirstOrDefault(p => p.Id == 5);
+            //decimal? price = 2000 + service.Price;
+            //DiscountTB.Text = "Скидка: 4000 руб.";
+            //PriceTB.Text = $"Цена: {price} руб.";
+            //FirstPage.newOrder.ServiceId = service.Id;
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.Service.FirstOrDefault(p => p.Id == 6);
-            decimal? price = 2000 + service.Price;
-            DiscountTB.Text = "Скидка: 4000 руб.";
-            PriceTB.Text = $"Цена: {price} руб.";
-            FirstPage.newOrder.ServiceId = service.Id;
+            //var service = Context._con.Service.FirstOrDefault(p => p.Id == 6);
+            //decimal? price = 2000 + service.Price;
+            //DiscountTB.Text = "Скидка: 4000 руб.";
+            //PriceTB.Text = $"Цена: {price} руб.";
+            //FirstPage.newOrder.ServiceId = service.Id;
         }
 
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.Service.FirstOrDefault(p => p.Id == 7);
-            decimal? price = 2000 + service.Price;
-            DiscountTB.Text = "Скидка: 4000 руб.";
-            PriceTB.Text = $"Цена: {price} руб.";
-            FirstPage.newOrder.ServiceId = service.Id;
+            //var service = Context._con.Service.FirstOrDefault(p => p.Id == 7);
+            //decimal? price = 2000 + service.Price;
+            //DiscountTB.Text = "Скидка: 4000 руб.";
+            //PriceTB.Text = $"Цена: {price} руб.";
+            //FirstPage.newOrder.ServiceId = service.Id;
         }
 
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
         {
-            var service = Context._con.Service.FirstOrDefault(p => p.Id == 8);
-            decimal? price = 2000 + service.Price;
-            DiscountTB.Text = "Скидка: 4000 руб.";
-            PriceTB.Text = $"Цена: {price} руб.";
-            FirstPage.newOrder.ServiceId = service.Id;
+            //var service = Context._con.Service.FirstOrDefault(p => p.Id == 8);
+            //decimal? price = 2000 + service.Price;
+            //DiscountTB.Text = "Скидка: 4000 руб.";
+            //PriceTB.Text = $"Цена: {price} руб.";
+            //FirstPage.newOrder.ServiceId = service.Id;
         }
 
         private void GoForward(object sender, RoutedEventArgs e)

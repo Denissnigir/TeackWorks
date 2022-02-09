@@ -8,6 +8,6 @@ namespace TeackWorks.Model
 {
     public static class Context
     {
-        public static TeackWorksEntities _con = new TeackWorksEntities();
+        public static AquaEntities _con = new AquaEntities();
     }
 }

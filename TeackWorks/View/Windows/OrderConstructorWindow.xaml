@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeackWorks.View.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="OrderConstructorWindow" 
         Height="400" 
@@ -13,6 +14,9 @@
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="White"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="0.15*"/>
@@ -27,10 +31,10 @@
         <Grid Grid.Row="1">
             <StackPanel Margin="10, 0, 0, 0">
                 <TextBlock Text="Готово: " x:Name="ProgressBarTB" FontSize="18"/>
-                <ProgressBar Height="20" Width="300" x:Name="MainPB" HorizontalAlignment="Left"/>
+                <ProgressBar Background="Black" Height="20" Width="300" x:Name="MainPB" HorizontalAlignment="Left"/>
             </StackPanel>
 
-            <Button HorizontalAlignment="Right" Content="Закрыть" Click="Close" VerticalAlignment="Center" Margin="0, 0, 10, 0"/>
+            <Button HorizontalAlignment="Right" Background="Transparent" BorderBrush="Black" Foreground="Black" Content="Закрыть" Click="Close" VerticalAlignment="Center" Margin="0, 0, 10, 0"/>
         </Grid>
     </Grid>
 </Window>

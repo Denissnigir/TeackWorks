@@ -9,31 +9,31 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage" FontFamily="Century Gothic" >
 
-    <Grid Background="#63a0d8">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Black" Opacity="0.5"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Профессиональная разработка продающих сайтов"  VerticalAlignment="Bottom" FontSize="32" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White"/>
-            <TextBlock Text="Тщательно продумаем дизайн и структуру вашего сайта. Заставим ваш сайт продавать и работать на вас."  VerticalAlignment="Top" FontSize="18" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White" Grid.Row="1"/>
-            <Grid Grid.Row="2">
+            <TextBlock Text="Профессиональная подводная студия" VerticalAlignment="Bottom" FontSize="32" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White"/>
+            <TextBlock Text="Наша студия представляет собой съемочный павильон в котором смонтирован композитный бассейн третьего поколения, нейтральной для кино-фото-производства расцветки."  VerticalAlignment="Top" FontSize="18" TextAlignment="Left" TextWrapping="Wrap" Margin="20, 0, 0, 0" Foreground="White" Grid.Row="1"/>
+            <Grid Grid.Row="2" >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 0, 0, 0">
-                    <Button Background="White" Click="Button_Click" BorderBrush="White" Content="Выбрать тип сайта" FontSize="12" Width="180" Height="30"/>
-                    <Button Background="White" Click="OpenConstructor" BorderBrush="White" Content="Рассчитать стоимость" FontSize="12" Width="180" Height="30" Margin="10, 0, 0, 0"/>
+                    <Button Background="White" Click="Button_Click" BorderBrush="#63a0d8" Foreground="#63a0d8" Content="Оставить заявку" FontSize="12" Width="180" Height="30"/>
+                    <Button Background="White" Click="OpenConstructor" BorderBrush="#63a0d8" Foreground="#63a0d8" Content="Посмотреть работы" FontSize="12" Width="180" Height="30" Margin="10, 0, 0, 0"/>
                 </StackPanel>
             </Grid>
         </Grid>
 
-        <Grid Grid.Column="1">
-            <Image Source="/TeackWorks;component/Resources/slider5.png" Margin="40"/>
-        </Grid>
     </Grid>
 </Page>
